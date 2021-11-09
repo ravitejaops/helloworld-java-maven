@@ -11,7 +11,7 @@ node('ec2linux') {
   
   stage ('Scan and Build Jar File') {
             steps {
-               withSonarQubeEnv(installationName: 'sonarJenkins', credentialsId: 'sonarJenkins') {
+               withSonarQubeEnv(installationName: 'sonarqubeJenkins', credentialsId: 'sonarJenkins') {
                 sh 'mvn clean package sonar:sonar'
                 }
             }
