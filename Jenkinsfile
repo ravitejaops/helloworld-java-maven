@@ -1,4 +1,4 @@
-node('agent1_linux ') {
+node('ec2linux') {
 
   stage ('Checkout'){
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravitejaops/helloworld-java-maven.git']]])
