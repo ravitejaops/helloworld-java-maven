@@ -19,7 +19,7 @@ node() {
                    -Dsonar.sources=src/main/java/ \
                    -Dsonar.sourceEncoding=UTF-8 \
                    -Dsonar.language=java \
-                   -Dsonar.java.binaries=target/classes/ \
+                   -Dsonar.java.binaries=target/ \
                    -Dsonar.tests=src/test \
                    -Dsonar.junit.reportPaths=target/surefire-reports/ \
                    -Dsonar.surefire.reportPaths=target/surefire-reports/ \
