@@ -3,13 +3,13 @@ node() {
   stage ('Checkout'){
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravitejaops/helloworld-java-maven.git']]])
     }
-  /*stage ('Build') {
+  stage ('Build') {
     withMaven  {
     sh 'mvn -B -DskipTests clean package'
     }
-  }*/
+  }
 
-  stage ('Scan and Build Jar File') {
+  /*stage ('Scan and Build Jar File') {
                withSonarQubeEnv(installationName: 'sonarqubeJenkins', credentialsId: 'sonarJenkins') {
                 sh 'mvn clean org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent install sonar:sonar \
                    -Dsonar.projectKey=com.scmgalaxy.mavensample:my-maven \
@@ -26,5 +26,5 @@ node() {
                    -Dsonar.jacoco.reportPaths=target/jacoco.exec \
                    -Dsonar.verbose=true'
                 }
-        }
+        }*/
 }
