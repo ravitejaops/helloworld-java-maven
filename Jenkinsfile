@@ -10,7 +10,7 @@ node() {
   }*/
 
   stage ('Scan and Build Jar File') {
-               withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'sonarqubeid') {
+               withSonarQubeEnv('sonarqube') {
                 sh 'mvn clean org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent install sonar:sonar \
                    -Dsonar.projectKey=helloworld-java-maven:helloworld-java-maven \
                    -Dsonar.host.url=http://18.133.170.11:9000/sonar \
