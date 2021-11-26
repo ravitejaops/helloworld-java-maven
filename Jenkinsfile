@@ -24,6 +24,7 @@ node() {
                    -Dsonar.junit.reportPaths=target/surefire-reports/ \
                    -Dsonar.surefire.reportPaths=target/surefire-reports/ \
                    -Dsonar.jacoco.reportPaths=target/jacoco.exec \
+                   -D sonar.java.coveragePlugin=jacoco \
                    -Dsonar.verbose=true'
                 }
         }
